@@ -13,18 +13,18 @@ spec:
         app: nginx-demo
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.25
-    ports:
-      - containerPort: 80
-    env:
-      - name: APP_ENV
-        valueFrom:
-          configMapKeyRef:
-            name: payment-config
-            key: APP_ENV
-      - name: APP_MESSAGE
-        valueFrom:
-          configMapKeyRef:
-            name: payment-config
-            key: APP_MESSAGE
+        - name: nginx
+          image: nginx:1.25
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: APP_ENV
+            - name: APP_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: payment-config
+                  key: APP_MESSAGE
