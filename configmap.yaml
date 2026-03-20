@@ -4,4 +4,4 @@ metadata:
   name: payment-config
 data:
   APP_ENV: dev
-  APP_MESSAGE: "Hello from ConfigMap 🚀"
+  APP_MESSAGE: "Hello from ConfigMap"
